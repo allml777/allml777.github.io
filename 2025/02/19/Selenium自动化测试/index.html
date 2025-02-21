@@ -19,23 +19,23 @@
   <meta name="author" content="ALLML">
   <meta name="keywords" content="">
   
-    <meta name="description" content="（一）初识 VimNormal 模式：基本移动 hjkl：左下上右 gg：跳到最后一行（类似Home键） G：跳到最后一行（类似End键） &lt;Ctrl-u&gt;&#x2F;&lt;Ctrl-b&gt;：往上翻半页&#x2F;一页（类似PageUp键） &lt;Ctrl-d&gt;&#x2F;&lt;Ctrl-f&gt;：往下翻半页&#x2F;一页（类似PageDown键） &#123;li">
+    <meta name="description" content="&#x3D;&#x3D;还没写完，未完待续&#x3D;&#x3D;  Selenium自动化测试课程目标 了解为何要进行自动化测试 认识 Selenium 的工作原理 通过 Selenium IDE 学习 Selenium 语句和元素定位 基于 Java 学习 WebDriver 的使用 自动化测试的一些常见问题和解决思路 掌握 TestNG 测试框架基本使用 了解 TestNG 数据驱动  自">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vim学习">
-<meta property="og:url" content="https://allml777.github.io/2025/02/15/Vim%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:title" content="Selenium 自动化测试">
+<meta property="og:url" content="https://allml777.github.io/2025/02/19/Selenium%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/index.html">
 <meta property="og:site_name" content="ALLML的博客">
-<meta property="og:description" content="（一）初识 VimNormal 模式：基本移动 hjkl：左下上右 gg：跳到最后一行（类似Home键） G：跳到最后一行（类似End键） &lt;Ctrl-u&gt;&#x2F;&lt;Ctrl-b&gt;：往上翻半页&#x2F;一页（类似PageUp键） &lt;Ctrl-d&gt;&#x2F;&lt;Ctrl-f&gt;：往下翻半页&#x2F;一页（类似PageDown键） &#123;li">
+<meta property="og:description" content="&#x3D;&#x3D;还没写完，未完待续&#x3D;&#x3D;  Selenium自动化测试课程目标 了解为何要进行自动化测试 认识 Selenium 的工作原理 通过 Selenium IDE 学习 Selenium 语句和元素定位 基于 Java 学习 WebDriver 的使用 自动化测试的一些常见问题和解决思路 掌握 TestNG 测试框架基本使用 了解 TestNG 数据驱动  自">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://allml777.github.io/">
-<meta property="article:published_time" content="2025-02-15T06:58:03.000Z">
-<meta property="article:modified_time" content="2025-02-15T06:58:25.200Z">
+<meta property="og:image" content="https://allml777.github.io/%22img/Selenium%E8%87%AA%E5%8A%A8%E5%8C%96/%22">
+<meta property="article:published_time" content="2025-02-19T01:21:55.000Z">
+<meta property="article:modified_time" content="2025-02-21T06:17:13.037Z">
 <meta property="article:author" content="ALLML">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://allml777.github.io/">
+<meta name="twitter:image" content="https://allml777.github.io/%22img/Selenium%E8%87%AA%E5%8A%A8%E5%8C%96/%22">
   
   
   
-  <title>Vim学习 - ALLML的博客</title>
+  <title>Selenium 自动化测试 - ALLML的博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Vim学习"></span>
+            <span id="subtitle" data-typed-text="Selenium 自动化测试"></span>
           
         </div>
 
@@ -212,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-02-15 14:58" pubdate>
-          2025年2月15日 下午
+        <time datetime="2025-02-19 09:21" pubdate>
+          2025年2月19日 上午
         </time>
       </span>
     
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.4k 字
+          565 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          12 分钟
+          5 分钟
         
       </span>
     
@@ -272,183 +272,104 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Vim学习</h1>
+            <h1 id="seo-header">Selenium 自动化测试</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="（一）初识-Vim"><a href="#（一）初识-Vim" class="headerlink" title="（一）初识 Vim"></a>（一）初识 Vim</h1><h2 id="Normal-模式：基本移动"><a href="#Normal-模式：基本移动" class="headerlink" title="Normal 模式：基本移动"></a>Normal 模式：基本移动</h2><ul>
-<li><code>hjkl</code>：左下上右</li>
-<li><code>gg</code>：跳到最后一行（类似<code>Home</code>键）</li>
-<li><code>G</code>：跳到最后一行（类似<code>End</code>键）</li>
-<li><code>&lt;Ctrl-u&gt;</code>&#x2F;<code>&lt;Ctrl-b&gt;</code>：往上翻半页&#x2F;一页（类似<code>PageUp</code>键）</li>
-<li><code>&lt;Ctrl-d&gt;</code>&#x2F;<code>&lt;Ctrl-f&gt;</code>：往下翻半页&#x2F;一页（类似<code>PageDown</code>键）</li>
-<li><code>&#123;lineNumber&#125;gg</code>：跳到第<code>lineNumber</code>行</li>
-<li><code>&lt;zz&gt;</code>&#x2F;<code>&lt;zt&gt;</code>&#x2F;<code>&lt;zb&gt;</code>：光标行设置为 屏幕居中&#x2F;屏幕第一行&#x2F;屏幕最后一行</li>
-</ul>
-<h2 id="进入-Insert-模式"><a href="#进入-Insert-模式" class="headerlink" title="进入 Insert 模式"></a>进入 Insert 模式</h2><p>Normal 模式下通过特定命令进入 Insert 模式</p>
-<ul>
-<li><code>i</code>：代表 “insert”，当前光标之前开始输入</li>
-<li><code>a</code>：代表“append”，当前光标之后开始输入</li>
-<li><code>o</code>：下方插入新的一行，然后开始输入</li>
-<li><code>s</code>：删除当前光标的字符，然后开始输入</li>
-<li><code>I</code>：在本行的开头开始输入</li>
-<li><code>A</code>：在本行的末尾开始输入</li>
-<li><code>O</code>：上方插入新的一行，然后开始输入</li>
-<li><code>S</code>：删除当前行，然后开始输入</li>
+                <blockquote>
+<p><strong>&#x3D;&#x3D;还没写完，未完待续&#x3D;&#x3D;</strong></p>
+</blockquote>
+<h1 id="Selenium自动化测试"><a href="#Selenium自动化测试" class="headerlink" title="Selenium自动化测试"></a>Selenium自动化测试</h1><h2 id="课程目标"><a href="#课程目标" class="headerlink" title="课程目标"></a>课程目标</h2><ol>
+<li>了解为何要进行自动化测试</li>
+<li>认识 Selenium 的工作原理</li>
+<li>通过 Selenium IDE 学习 Selenium 语句和元素定位</li>
+<li>基于 Java 学习 WebDriver 的使用</li>
+<li>自动化测试的一些常见问题和解决思路</li>
+<li>掌握 TestNG 测试框架基本使用</li>
+<li>了解 TestNG 数据驱动</li>
+</ol>
+<h2 id="自动化测试"><a href="#自动化测试" class="headerlink" title="自动化测试"></a>自动化测试</h2><h3 id="1-为什么要做自动化测试"><a href="#1-为什么要做自动化测试" class="headerlink" title="1.为什么要做自动化测试"></a>1.为什么要做自动化测试</h3><ul>
+<li>软件开发节奏</li>
+<li>测试重复执行</li>
+<li>迭代开发模型</li>
 </ul>
 <blockquote>
-<p>Tips：大写字母和小写字母的操作存在关联，可以一起记忆</p>
+<p>比如说面试中问你，新项目自动化测试占多少？</p>
+<blockquote>
+<p>没有，一般是迭代和回归项目才有自动化测试</p>
 </blockquote>
-<h2 id="进入-Command-模式"><a href="#进入-Command-模式" class="headerlink" title="进入 Command 模式"></a>进入 Command 模式</h2><p>Normal 模式下通过输入<code>:</code>进入 Command 模式</p>
+<p>那迭代和回归项目的呢？</p>
+<blockquote>
+<p>一般做正向的10-20-30%（中小企业往低说）</p>
+<p>逆向的基本不太做自动化测试</p>
+</blockquote>
+</blockquote>
+<h3 id="2-人工测试和自动化测试"><a href="#2-人工测试和自动化测试" class="headerlink" title="2.人工测试和自动化测试"></a>2.人工测试和自动化测试</h3><ul>
+<li><p>自动化测试不能取代人工测试</p>
 <ul>
-<li><code>:w</code>：保存当前文件</li>
-<li><code>:q</code>：退出</li>
-<li><code>:q!</code>：放弃当前更改，然后退出</li>
-<li><code>:wq</code>：保存当前更改，然后退出</li>
-<li><code>:h &#123;command&#125;</code>：显示关于命令的帮助</li>
-<li><code>&lt;Esc&gt;</code>回到 Normal 模式</li>
+<li><p>测试用例的设计</p>
+</li>
+<li><p>界面和用户体验测试</p>
+</li>
+<li><p>正确性判断</p>
+</li>
+<li><p>自动化测试的限制</p>
+<p>验证码    开发提供万能验证码，通过设置暂时取消验证码，注入有效Cookie</p>
+<p>页面特殊控件    银行登录特殊控件    媒体播放器的特殊控件</p>
+</li>
 </ul>
-<h2 id="进入-Visual-模式"><a href="#进入-Visual-模式" class="headerlink" title="进入 Visual 模式"></a>进入 Visual 模式</h2><ul>
-<li>Normal 模式下按<code>v</code>进入可视模式</li>
-<li>进入可视模式后可以用 Normal 模式下的移动命令选择文本</li>
-<li>可视模式下<code>x</code>&#x2F;<code>y</code>：剪切&#x2F;复制；回到 Normal 模式下<code>p</code>粘贴</li>
-<li>Normal 模式下按<code>V</code>进入行可视模式，一次选中一整行，在需要选中多行时很方便</li>
-<li><code>&lt;Esc&gt;</code>回到 Normal 模式</li>
+</li>
+<li><p>自动化测试适用的场景</p>
+<ul>
+<li>主要解决测试过程中的重复劳动</li>
+<li>需要重复的机械化的界面操作的测试</li>
+<li>需要计算和数值比较的测试</li>
+<li>提高测试效率和回归测试的覆盖率</li>
 </ul>
-<h2 id="Vim-和-其他文本编辑软件的对比"><a href="#Vim-和-其他文本编辑软件的对比" class="headerlink" title="Vim 和 其他文本编辑软件的对比"></a>Vim 和 其他文本编辑软件的对比</h2><table>
+</li>
+<li><p>自动化测试适合的阶段</p>
+<ul>
+<li>版本迭代的回归测试</li>
+<li>每日构建的预测试</li>
+<li>系统监控</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-Selenium-简介"><a href="#3-Selenium-简介" class="headerlink" title="3.Selenium 简介"></a>3.Selenium 简介</h3><table>
 <thead>
 <tr>
-<th>操作</th>
-<th>其他文本编辑软件</th>
-<th>Vim命令</th>
+<th>组件</th>
+<th>图标</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>光标移动</td>
-<td>上下左右方向键</td>
-<td><code>hjkl</code></td>
+<td>Selenium IDE</td>
+<td></td>
+<td>网页自动化测试集成开发环境，以 Firefox，Chrome 和 Edge 浏览器的插件形式存在。</td>
 </tr>
 <tr>
-<td>文件首尾</td>
-<td><code>Home</code>&#x2F;<code>End</code></td>
-<td><code>gg</code>&#x2F;<code>G</code></td>
+<td>Selenium WebDriver</td>
+<td></td>
+<td>轻量级的网页自动化测试框架，支持使用多种编程语言开发基于各种浏览器的自动化测试脚本。</td>
 </tr>
 <tr>
-<td>翻页</td>
-<td><code>PageUp</code>&#x2F;<code>PageDown</code></td>
-<td><code>&lt;Ctrl-u&gt;</code>&#x2F;<code>&lt;Ctrl-d&gt;</code>,<code>&lt;Ctrl-b&gt;</code>&#x2F;<code>&lt;Ctrl-f&gt;</code></td>
-</tr>
-<tr>
-<td>剪切</td>
-<td><code>&lt;Ctrl-x&gt;</code></td>
-<td>选中后<code>x</code></td>
-</tr>
-<tr>
-<td>复制</td>
-<td><code>&lt;Ctrl-c&gt;</code></td>
-<td>选中后<code>y</code></td>
-</tr>
-<tr>
-<td>粘贴</td>
-<td><code>&lt;ctrl-v&gt;</code></td>
-<td>Normal模式中<code>p</code></td>
+<td>Selenium Grid</td>
+<td></td>
+<td>在不同的浏览器，操作系统和电脑上并行运行自动化测试脚本。</td>
 </tr>
 </tbody></table>
-<h1 id="（二）移动与复制"><a href="#（二）移动与复制" class="headerlink" title="（二）移动与复制"></a>（二）移动与复制</h1><h2 id="基于单词的移动"><a href="#基于单词的移动" class="headerlink" title="基于单词的移动"></a>基于单词的移动</h2><p>简单的<code>hjkl</code>显然无法满足我们的需要</p>
-<ul>
-<li><code>w</code>：代表“word”，跳转到下一处单词的开头</li>
-<li><code>b</code>：代表“back”，跳转到上一处单词的开头</li>
-<li><code>e</code>：代表“end”，跳转到下一处单词的结尾</li>
-<li><code>ge</code>：<code>e</code>的反向版本，跳转到上一处单词的结尾</li>
-</ul>
-<p><code>wbe</code>大写版本<code>WBE</code>对应的单词是连续的非空字符</p>
-<p><img src="/" srcset="/img/loading.gif" lazyload></p>
-<h2 id="基于搜索的移动"><a href="#基于搜索的移动" class="headerlink" title="基于搜索的移动"></a>基于搜索的移动</h2><p>行内搜索：</p>
-<ul>
-<li><code>f&#123;char&#125;</code>&#x2F;<code>t&#123;char&#125;</code>：跳转到下一个<code>char</code>字符出现处&#x2F;出现前</li>
-<li><code>;</code>&#x2F;<code>,</code>：快速向后&#x2F;向前重复<code>ft</code>查找</li>
-<li><code>F&#123;char&#125;</code>&#x2F;<code>T&#123;char&#125;</code>：往前搜索而非往后</li>
-</ul>
-<p>文件中搜索：</p>
-<ul>
-<li><code>/&#123;pattern&#125;</code>：跳转到文本文件中下一个<code>pattern</code>出现的地方</li>
-<li><code>?&#123;pattern&#125;</code>：跳转到文本文件中上一个<code>pattern</code>出现的地方</li>
-<li><code>pattern</code>可以是正则表达式</li>
-<li><code>*</code>：等价于<code>/&#123;pattern&#125;</code>，<code>pattern</code>是当前光标下的单词</li>
-<li><code>n</code>&#x2F;<code>N</code>：向下&#x2F;向上重复<code>/</code>查找</li>
-</ul>
-<h2 id="基于标点的移动"><a href="#基于标点的移动" class="headerlink" title="基于标点的移动"></a>基于标点的移动</h2><ul>
-<li><code>m&#123;mark&#125;</code>：把当前位置标记为mark</li>
-<li>&#96;&#96;{mark}<code>：跳转到名为</code>mark&#96;标记的位置</li>
-</ul>
-<p><code>mark</code>是<code>a-z</code>的字符</p>
-<p>常用场景：当要临时离开当前光标处，做一些事情后再<strong>快速地</strong>回来</p>
-<p>常用标记例如<code>mm</code>-&gt;<code>就是m&#123;m&#125;</code>连按两下<code>m</code>比较块，之后就通过&#96;&#96;{m}&#96;切换回来</p>
-<p>内置标记：</p>
-<ul>
-<li><code>ˋˋ</code>：上次跳转前的位置（这里用的还是&#96;(反引号)但是由于我实在打不出来，所以用一个长得很像的符号代替了）</li>
-<li>&#96;&#96;.&#96;：上次修改的位置</li>
-<li>&#96;&#96;^&#96;：上次插入的位置</li>
-</ul>
-<h2 id="其他实用的跳转"><a href="#其他实用的跳转" class="headerlink" title="其他实用的跳转"></a>其他实用的跳转</h2><ul>
-<li><p><code>^</code>&#x2F;<code>$</code> ：跳转到本行的开始&#x2F;结尾</p>
-</li>
-<li><p><code>%</code> ：跳到匹配的配对符（括号等）处</p>
+<h2 id="Selenium-IDE"><a href="#Selenium-IDE" class="headerlink" title="Selenium IDE"></a>Selenium IDE</h2><h3 id="1-工作原理"><a href="#1-工作原理" class="headerlink" title="1.工作原理"></a>1.工作原理</h3><p><img src="/%22img/Selenium%E8%87%AA%E5%8A%A8%E5%8C%96/%22" srcset="/img/loading.gif" lazyload></p>
+<h3 id="2-基本步骤"><a href="#2-基本步骤" class="headerlink" title="2.基本步骤"></a>2.基本步骤</h3><ul>
+<li>安装 Selenium IDE</li>
+<li>录制或编写脚本</li>
+<li>修改和优化脚本<ol>
+<li>打开  Selenium IDE</li>
+</ol>
 </li>
 </ul>
-<h2 id="Operator-Motion-Action"><a href="#Operator-Motion-Action" class="headerlink" title="Operator+Motion&#x3D;Action"></a>Operator+Motion&#x3D;Action</h2><p><code>&#123;operator&#125;&#123;motion&#125;</code> ：⼀次编辑动作</p>
-<p>常见操作符{operator}：</p>
-<ul>
-<li><p><code>c</code> ：代表“change” ，修改，删除内容，并进入插入模式</p>
-</li>
-<li><p><code>d</code> ：代表“delete” ，删除</p>
-</li>
-<li><p><code>y</code> ：代表“yank” ，复制</p>
-</li>
-<li><p><code>v</code> ：代表“visual” ，选中文本，进入可视模式</p>
-</li>
-</ul>
-<p>例子：</p>
-<ul>
-<li><code>dgg</code> ：删除到第一行</li>
-<li><code>ye</code> ：复制到单词结尾</li>
-<li><code>d$</code> ：删除到行尾</li>
-<li><code>dt;</code> ：删除直到分号为止的内容</li>
-<li>“操作符+移动” 是非常重要的操作逻辑，他允许你组合出各种动作</li>
-</ul>
-<p>大部分操作符连续按两次（ <code>cc/dd/yy</code> ）：将其作用在这一行上</p>
-<p><code>dd</code> ：删除这一行</p>
-<h2 id="重复操作：-命令"><a href="#重复操作：-命令" class="headerlink" title="重复操作： . 命令"></a>重复操作： <strong>.</strong> 命令</h2><p><code>.</code> ：重复上⼀次修改</p>
-<p><code>u</code> ：撤销上⼀次修改</p>
-<p><code>&lt;Ctrl-r&gt;</code> ：重做上⼀次修改</p>
-<p><code>.</code> 命令⾮常适合用于需要多次重复某⼀个修改动作的场景</p>
-<p>省去了重复输入命令，大大提高效率</p>
-<h2 id="批量操作：数字-动作"><a href="#批量操作：数字-动作" class="headerlink" title="批量操作：数字+动作"></a>批量操作：数字+动作</h2><p><code>&#123;count&#125;&#123;action&#125;</code> ：重复 <code>count</code>次 <code>action</code> 动作</p>
-<p>动作可以是移动动作或是编辑动作</p>
-<ul>
-<li><code>4j</code> ：向下移动 4 行</li>
-<li><code>3dw</code> ：删除 3 个单词</li>
-<li><code>2yy</code> ：复制 2 行</li>
-<li><code>4p</code> ：粘贴 4 次</li>
-</ul>
-<p><strong>数字+动作，是⼀种重要的批量操作方式，命令直观，语义明确</strong></p>
-<ul>
-<li><p><code>.</code> 命令可以直观地看到每⼀次的变化，在合适的时候停止</p>
-</li>
-<li><p>数字+动作则需要预先知道动作的次数</p>
-</li>
-</ul>
-<h2 id="技巧：使用相对行号确定移动范围"><a href="#技巧：使用相对行号确定移动范围" class="headerlink" title="技巧：使用相对行号确定移动范围"></a>技巧：使用相对行号确定移动范围</h2><p>当涉及行操作时，使用相对行号能够更直观地确定范围</p>
-<p><code>:set relativenumber</code> ：开启</p>
-<p><code>:set norelativenumber</code> ：关闭</p>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul>
-<li>掌握进阶的移动与编辑命令</li>
-<li>（重要）掌握 <code>&#123;operator&#125;&#123;motion&#125;</code> 的操作哲学</li>
-<li>掌握用 <code>.</code> 命令重复上⼀次修改</li>
-<li>（重要）掌握使用 <code>&#123;count&#125;&#123;action&#125;</code> 进行批量操作</li>
-</ul>
-
+<h3 id="3-Selenium-IDE-基础"><a href="#3-Selenium-IDE-基础" class="headerlink" title="3.Selenium IDE 基础"></a>3.Selenium IDE 基础</h3><h4 id="3-3-1-Selenium-IDE-命令"><a href="#3-3-1-Selenium-IDE-命令" class="headerlink" title="3.3.1 Selenium IDE 命令"></a>3.3.1 Selenium IDE 命令</h4><h4 id="3-3-2-操作命令"><a href="#3-3-2-操作命令" class="headerlink" title="3.3.2 操作命令"></a>3.3.2 操作命令</h4><h4 id="3-3-3-元素定位"><a href="#3-3-3-元素定位" class="headerlink" title="3.3.3 元素定位"></a>3.3.3 元素定位</h4><h5 id="3-3-1-简单元素定位"><a href="#3-3-1-简单元素定位" class="headerlink" title="3.3.1 简单元素定位"></a>3.3.1 简单元素定位</h5>
                 
               </div>
             
@@ -465,8 +386,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Vim学习</div>
-      <div>https://allml777.github.io/2025/02/15/Vim学习/</div>
+      <div>Selenium 自动化测试</div>
+      <div>https://allml777.github.io/2025/02/19/Selenium自动化测试/</div>
     </div>
     <div class="license-meta">
       
@@ -478,7 +399,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年2月15日</div>
+          <div>2025年2月19日</div>
         </div>
       
       
@@ -510,9 +431,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/02/19/Selenium%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" title="Selenium 自动化测试">
+                      <a href="/2025/02/21/Hexo%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8/" title="Hexo 命令使用">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Selenium 自动化测试</span>
+                        <span class="hidden-mobile">Hexo 命令使用</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -520,8 +441,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/02/15/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2025/02/15/Vim%E5%AD%A6%E4%B9%A0/" title="Vim学习">
+                        <span class="hidden-mobile">Vim学习</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

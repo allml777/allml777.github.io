@@ -4,6 +4,32 @@
   
   
   <entry>
+    <title>Hexo 命令使用</title>
+    <link href="/2025/02/21/Hexo%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8/"/>
+    <url>/2025/02/21/Hexo%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>由于每次想更新博客都要重新看一遍 hexo 命令过于麻烦，因此记录一些常用的 hexo 命令和搭建 Hexo 的教程链接。</p></blockquote><h2 id="一、使用-hexo-在-GitHub-上搭建博客"><a href="#一、使用-hexo-在-GitHub-上搭建博客" class="headerlink" title="一、使用 hexo 在 GitHub 上搭建博客"></a>一、使用 hexo 在 GitHub 上搭建博客</h2><p>参考链接：[<a href="https://zhuanlan.zhihu.com/p/60578464">使用 Hexo+GitHub 搭建个人免费博客教程（小白向） - 知乎</a>]:</p><blockquote><p>注意：Repository name 中输入  <code>用户名.github.io</code> ，名称要和用户名一致，比如我这个就只能是 <code>allml777.giyhub.io</code> ，不然无法访问。</p></blockquote><h2 id="二、常用的hexo命令"><a href="#二、常用的hexo命令" class="headerlink" title="二、常用的hexo命令"></a>二、常用的hexo命令</h2><table><thead><tr><th>命令</th><th>作用</th></tr></thead><tbody><tr><td>hexo init</td><td>初始化</td></tr><tr><td>hexo g</td><td>生成页面</td></tr><tr><td>hexo s</td><td>启动浏览，会在本地构建网页，可以通过访问<code>http://localhost:4000</code>来查看生成页面的效果</td></tr><tr><td>hexo d</td><td>提交网页到 GitHub</td></tr><tr><td>hexo clean</td><td>清理缓存</td></tr><tr><td>hexo new [layout] &lt;title&gt;</td><td>在source文件夹中新建一个markdown文件，就可以使用 Markdown 编辑器在该文件中撰写文章了。<code>layout</code> 可以省略，title用<code>&quot;&quot;</code>括起来，示例 <code>hexo new &quot;这次写点什么内容呢&quot;</code></td></tr><tr><td>hexo g -d</td><td>就是把 <code>hexo g</code> 和 <code>hexo d</code> 连起来使用</td></tr></tbody></table><h2 id="三、一般的更新博客流程"><a href="#三、一般的更新博客流程" class="headerlink" title="三、一般的更新博客流程"></a>三、一般的更新博客流程</h2><p>hexo new &lt;title&gt; —&gt; hexo g —&gt;hexo s —&gt; hexo d<br>新建md文件 —&gt; 根据编写的md文件生成页面 —&gt; 启动页面在本地看看效果 —&gt; 提交到 GitHub</p><h2 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h2><p>暂时就这些内容，目前够用。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Selenium 自动化测试</title>
+    <link href="/2025/02/19/Selenium%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"/>
+    <url>/2025/02/19/Selenium%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p><strong>&#x3D;&#x3D;还没写完，未完待续&#x3D;&#x3D;</strong></p></blockquote><h1 id="Selenium自动化测试"><a href="#Selenium自动化测试" class="headerlink" title="Selenium自动化测试"></a>Selenium自动化测试</h1><h2 id="课程目标"><a href="#课程目标" class="headerlink" title="课程目标"></a>课程目标</h2><ol><li>了解为何要进行自动化测试</li><li>认识 Selenium 的工作原理</li><li>通过 Selenium IDE 学习 Selenium 语句和元素定位</li><li>基于 Java 学习 WebDriver 的使用</li><li>自动化测试的一些常见问题和解决思路</li><li>掌握 TestNG 测试框架基本使用</li><li>了解 TestNG 数据驱动</li></ol><h2 id="自动化测试"><a href="#自动化测试" class="headerlink" title="自动化测试"></a>自动化测试</h2><h3 id="1-为什么要做自动化测试"><a href="#1-为什么要做自动化测试" class="headerlink" title="1.为什么要做自动化测试"></a>1.为什么要做自动化测试</h3><ul><li>软件开发节奏</li><li>测试重复执行</li><li>迭代开发模型</li></ul><blockquote><p>比如说面试中问你，新项目自动化测试占多少？</p><blockquote><p>没有，一般是迭代和回归项目才有自动化测试</p></blockquote><p>那迭代和回归项目的呢？</p><blockquote><p>一般做正向的10-20-30%（中小企业往低说）</p><p>逆向的基本不太做自动化测试</p></blockquote></blockquote><h3 id="2-人工测试和自动化测试"><a href="#2-人工测试和自动化测试" class="headerlink" title="2.人工测试和自动化测试"></a>2.人工测试和自动化测试</h3><ul><li><p>自动化测试不能取代人工测试</p><ul><li><p>测试用例的设计</p></li><li><p>界面和用户体验测试</p></li><li><p>正确性判断</p></li><li><p>自动化测试的限制</p><p>验证码    开发提供万能验证码，通过设置暂时取消验证码，注入有效Cookie</p><p>页面特殊控件    银行登录特殊控件    媒体播放器的特殊控件</p></li></ul></li><li><p>自动化测试适用的场景</p><ul><li>主要解决测试过程中的重复劳动</li><li>需要重复的机械化的界面操作的测试</li><li>需要计算和数值比较的测试</li><li>提高测试效率和回归测试的覆盖率</li></ul></li><li><p>自动化测试适合的阶段</p><ul><li>版本迭代的回归测试</li><li>每日构建的预测试</li><li>系统监控</li></ul></li></ul><h3 id="3-Selenium-简介"><a href="#3-Selenium-简介" class="headerlink" title="3.Selenium 简介"></a>3.Selenium 简介</h3><table><thead><tr><th>组件</th><th>图标</th><th>说明</th></tr></thead><tbody><tr><td>Selenium IDE</td><td></td><td>网页自动化测试集成开发环境，以 Firefox，Chrome 和 Edge 浏览器的插件形式存在。</td></tr><tr><td>Selenium WebDriver</td><td></td><td>轻量级的网页自动化测试框架，支持使用多种编程语言开发基于各种浏览器的自动化测试脚本。</td></tr><tr><td>Selenium Grid</td><td></td><td>在不同的浏览器，操作系统和电脑上并行运行自动化测试脚本。</td></tr></tbody></table><h2 id="Selenium-IDE"><a href="#Selenium-IDE" class="headerlink" title="Selenium IDE"></a>Selenium IDE</h2><h3 id="1-工作原理"><a href="#1-工作原理" class="headerlink" title="1.工作原理"></a>1.工作原理</h3><p><img src="/%22img/Selenium%E8%87%AA%E5%8A%A8%E5%8C%96/%22"></p><h3 id="2-基本步骤"><a href="#2-基本步骤" class="headerlink" title="2.基本步骤"></a>2.基本步骤</h3><ul><li>安装 Selenium IDE</li><li>录制或编写脚本</li><li>修改和优化脚本<ol><li>打开  Selenium IDE</li></ol></li></ul><h3 id="3-Selenium-IDE-基础"><a href="#3-Selenium-IDE-基础" class="headerlink" title="3.Selenium IDE 基础"></a>3.Selenium IDE 基础</h3><h4 id="3-3-1-Selenium-IDE-命令"><a href="#3-3-1-Selenium-IDE-命令" class="headerlink" title="3.3.1 Selenium IDE 命令"></a>3.3.1 Selenium IDE 命令</h4><h4 id="3-3-2-操作命令"><a href="#3-3-2-操作命令" class="headerlink" title="3.3.2 操作命令"></a>3.3.2 操作命令</h4><h4 id="3-3-3-元素定位"><a href="#3-3-3-元素定位" class="headerlink" title="3.3.3 元素定位"></a>3.3.3 元素定位</h4><h5 id="3-3-1-简单元素定位"><a href="#3-3-1-简单元素定位" class="headerlink" title="3.3.1 简单元素定位"></a>3.3.1 简单元素定位</h5>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Vim学习</title>
     <link href="/2025/02/15/Vim%E5%AD%A6%E4%B9%A0/"/>
     <url>/2025/02/15/Vim%E5%AD%A6%E4%B9%A0/</url>
