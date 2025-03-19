@@ -4,6 +4,32 @@
   
   
   <entry>
+    <title>JMeter入门</title>
+    <link href="/2025/03/19/JMeter%E5%85%A5%E9%97%A8/"/>
+    <url>/2025/03/19/JMeter%E5%85%A5%E9%97%A8/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>使用CloudFlare R2对象存储做图床，结合PicGo实现博客配图</title>
+    <link href="/2025/03/04/%E4%BD%BF%E7%94%A8CloudFlare-R2%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E5%81%9A%E5%9B%BE%E5%BA%8A%EF%BC%8C%E7%BB%93%E5%90%88PicGo%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E9%85%8D%E5%9B%BE/"/>
+    <url>/2025/03/04/%E4%BD%BF%E7%94%A8CloudFlare-R2%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E5%81%9A%E5%9B%BE%E5%BA%8A%EF%BC%8C%E7%BB%93%E5%90%88PicGo%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E9%85%8D%E5%9B%BE/</url>
+    
+    <content type="html"><![CDATA[<p>在使用Hexo和Github搭建博客的过程中，我发现博客的图片难以管理，因此需要一种可以方便使用的图片调用方式。简单搜索后发现CloudFlare R2对象存储可以满足我的需求，因此写一篇博客纪念下这接近白嫖的博客✌️</p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>使用Hexo和Github搭建博客的过程中，我发现博客的图片难以管理，因此需要一种可以方便使用的图片调用方式。简单搜索后发现CloudFlare R2对象存储可以满足我的需求，因此写一篇博客纪念下这接近白嫖的博客✌️</p><p><img src="https://itohsaka.cn/blog/PicGo/%E9%95%BF%E5%B4%8E%E7%B4%A0%E4%B8%962.1.gif" alt="配图效果展示，离婚阔太太镇楼"></p><h2 id="内容准备"><a href="#内容准备" class="headerlink" title="内容准备"></a>内容准备</h2><ul><li><p>一张 visa 卡（我自己是用工行的星座卡，没年费）</p></li><li><p>CloudFlare账号（我直接用google登录的）</p></li><li><p>域名（没有也行）</p></li><li><p>有一些查资料的能力</p></li></ul><h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><p>1 登录 CloudFlare</p><p>链接<a href="https://dash.cloudflare.com/">https://dash.cloudflare.com/</a></p><p>2 依次点击：R2 对象存储 -&gt; 概述 -&gt; 创建存储桶</p><p><img src="https://itohsaka.cn/PicGo/image-20250304165342938.png" alt="image-20250304165342938"></p><p>3 创建存储桶，这一步完成后已经可以通过网页上传照片了。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hexo 命令使用</title>
     <link href="/2025/02/21/Hexo%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8/"/>
     <url>/2025/02/21/Hexo%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8/</url>
