@@ -1,0 +1,701 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="ALLML">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="SpringBoot_DAY01 写在前面，本文是按照b站 黑马程序员 的Java课程，结合本人的编程水平写的，并不完全基础。个人学习笔记，也不完全正确，仅供学习。 全网首发AI+JavaWeb开发入门，Tlias教学管理系统项目实战全套视频教程  黑马程序员SpringBoot3+Vue3全套视频教程   配置文件 application.properties application.yaml">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringBoot_DAY01">
+<meta property="og:url" content="https://allml777.github.io/2025/03/22/SpringBoot-DAY01/index.html">
+<meta property="og:site_name" content="ALLML的博客">
+<meta property="og:description" content="SpringBoot_DAY01 写在前面，本文是按照b站 黑马程序员 的Java课程，结合本人的编程水平写的，并不完全基础。个人学习笔记，也不完全正确，仅供学习。 全网首发AI+JavaWeb开发入门，Tlias教学管理系统项目实战全套视频教程  黑马程序员SpringBoot3+Vue3全套视频教程   配置文件 application.properties application.yaml">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://itohsaka.cn/PicGo/tmpA006.png">
+<meta property="og:image" content="https://itohsaka.cn/PicGo/tmp6982.png">
+<meta property="article:published_time" content="2025-03-22T13:00:52.000Z">
+<meta property="article:modified_time" content="2025-03-24T07:19:56.773Z">
+<meta property="article:author" content="ALLML">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://itohsaka.cn/PicGo/tmpA006.png">
+  
+  
+  
+  <title>SpringBoot_DAY01 - ALLML的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"allml777.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>ALLML</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="SpringBoot_DAY01"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-03-22 21:00" pubdate>
+          2025年3月22日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          12 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">SpringBoot_DAY01</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="SpringBoot-DAY01"><a href="#SpringBoot-DAY01" class="headerlink" title="SpringBoot_DAY01"></a>SpringBoot_DAY01</h1><blockquote>
+<p>写在前面，本文是按照b站 黑马程序员 的Java课程，结合本人的编程水平写的，并不完全基础。个人学习笔记，也不完全正确，仅供学习。</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1yGydYEE3H">全网首发AI+JavaWeb开发入门，Tlias教学管理系统项目实战全套视频教程</a></p>
+<p> <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14z4y1N7pg">黑马程序员SpringBoot3+Vue3全套视频教程</a> </p>
+</blockquote>
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><ul>
+<li>application.properties</li>
+<li>application.yaml</li>
+</ul>
+<blockquote>
+<p>开发中一般常用yaml，因此这里以yaml为例</p>
+</blockquote>
+<h3 id="yaml-配置"><a href="#yaml-配置" class="headerlink" title="yaml 配置"></a>yaml 配置</h3><p>先从一个简单的栗子看起</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-comment"># 发件人相关信息；yaml里一般数据的写法</span><br><span class="hljs-attr">email:</span><br>    <span class="hljs-attr">user:</span> <span class="hljs-number">1051322819</span><span class="hljs-string">@qq.com</span><br>    <span class="hljs-attr">code:</span> <span class="hljs-string">hsdjfhaskldgasvbyasabsty</span><br>    <span class="hljs-attr">host:</span> <span class="hljs-string">smtp.qq.com</span><br>    <span class="hljs-attr">auth:</span> <span class="hljs-literal">true</span><br>    <br><span class="hljs-comment"># ikun 数组之 hobby；yaml里数组的写法</span><br><span class="hljs-attr">hobbies:</span><br>	<span class="hljs-bullet">-</span> <span class="hljs-string">唱</span><br>	<span class="hljs-bullet">-</span> <span class="hljs-string">跳</span><br>	<span class="hljs-bullet">-</span> <span class="hljs-string">rap</span><br>	<span class="hljs-bullet">-</span> <span class="hljs-string">篮球</span><br>	<span class="hljs-bullet">-</span> <span class="hljs-string">music</span><br></code></pre></td></tr></table></figure>
+
+<p>这是一个简单的yaml配置，我在这里配置了一个第三方邮箱调用qq邮箱的配置，当然授权码是脸滚键盘的。</p>
+<p>整体的写法有点像python，需要注意的是，<code>user: 1051322819@qq.com</code>类似的键值对，键前面要有空格且user、code这样同级的键应该有相同的缩进。值和<code>:</code>中间需要有一个空格。</p>
+<p>下一段是数组的写法，没有<code>:</code>，用<code>-</code>来标记数据</p>
+<h3 id="配置信息引用"><a href="#配置信息引用" class="headerlink" title="配置信息引用"></a>配置信息引用</h3><p>使用<code>@Value(&quot;$&#123;键名&#125;&quot;)</code>引用，具体使用如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Component</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">EmailProperties</span>&#123;<br>    <span class="hljs-meta">@Value(&quot;$&#123;email.user&#125;&quot;)</span><br>    <span class="hljs-keyword">public</span> String user;<br>    <span class="hljs-meta">@Value(&quot;$&#123;email.code&#125;&quot;)</span><br>    <span class="hljs-keyword">public</span> String code;<br>    <span class="hljs-meta">@Value(&quot;$&#123;email.host&#125;&quot;)</span><br>    <span class="hljs-keyword">public</span> String host;<br>    <span class="hljs-meta">@Value(&quot;$&#123;email.auth&#125;&quot;)</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> auth;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>这就相当于把原来写死的配置文件统一配置，全局使用了。</p>
+<p>那这个里面<code>email.xxx</code>一直在重复，看起来很乱，那就需要一种方式简化这个前缀（不写前缀是不可能的），改进如下</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/* 这个 ConfigurationProperties 就是配置前缀的注解，</span><br><span class="hljs-comment">使用这种写法要保证类里面的参数和prefix里配的这个参数在yaml里的参数一致。</span><br><span class="hljs-comment">比如这里的prefix是email，那就要去application.yaml里找到email</span><br><span class="hljs-comment">email:</span><br><span class="hljs-comment">    user: 1051322819@qq.com</span><br><span class="hljs-comment">    code: hsdjfhaskldgasvbyasabsty</span><br><span class="hljs-comment">    host: smtp.qq.com</span><br><span class="hljs-comment">    auth: true</span><br><span class="hljs-comment">所以类里面的四个参数就是user、code、host、auth</span><br><span class="hljs-comment">** 参数名要完全一样！！！！！ **</span><br><span class="hljs-comment">*/</span><br><span class="hljs-meta">@ConfigurationProperties(prefix = &quot;email&quot;)</span><br><span class="hljs-meta">@Component</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">EmailProperties</span>&#123;<br><br>    <span class="hljs-keyword">public</span> String user;<br><br>    <span class="hljs-keyword">public</span> String code;<br><br>    <span class="hljs-keyword">public</span> String host;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> auth;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="整合mybatis"><a href="#整合mybatis" class="headerlink" title="整合mybatis"></a>整合mybatis</h2><p>mybatis是一个便于程序进行数据库操作的框架</p>
+<h3 id="配置mybatis"><a href="#配置mybatis" class="headerlink" title="配置mybatis"></a>配置mybatis</h3><p>在pom.xml中添加mybatis的起步依赖</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.mybatis.spring.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>mybatis-spring-boot-starter<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>3.0.0<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>&#x3D;&#x3D;未完待续&#x3D;&#x3D;</strong></p>
+<h2 id="Spring程序的分层"><a href="#Spring程序的分层" class="headerlink" title="Spring程序的分层"></a>Spring程序的分层</h2><p>前端–&gt;Controller–&gt;Service–&gt;Dao–&gt;DataBases–&gt;Dao–&gt;Service–&gt;Controller–&gt;前端</p>
+<h3 id="3层架构"><a href="#3层架构" class="headerlink" title="3层架构"></a>3层架构</h3><p>Controller：控制层；主要负责和前端的交互，即接收前端的数据，响应前端的数据。</p>
+<p>Service：业务逻辑层；处理具体的业务逻辑，比如我收到一个学生的体检信息（身高体重），我可以通过Service写个函数判断BMI（这人偏胖&#x2F;瘦&#x2F;正常。。。）</p>
+<p>Dao：（Data Access Object ）持久层&#x2F;数据层；负责数据的访问操作（增删改查）</p>
+<p><img src="https://itohsaka.cn/PicGo/tmpA006.png" srcset="/img/loading.gif" lazyload alt="tmpA006"></p>
+<blockquote>
+<p>图片中的三层架构还不是最终形态，还没有进行ioc（控制反转）和id（依赖注入），关于这两方面很快会讲。</p>
+</blockquote>
+<h3 id="简单分层后的问题"><a href="#简单分层后的问题" class="headerlink" title="简单分层后的问题"></a>简单分层后的问题</h3><p>可以看到在3层中，每次要调用其他层的方法都需要先进行导入，虽然使用了多态的写法<code>private UserService userService = new UserServiceImpl();</code>，但是如果我要使用<code>UserServiceImpl2</code>的实现类呢，或者<code>UserServiceImpl3</code>，那我除了要写这些新的UserService接口的实现类，还需要去修改Controller中的代码，这维护起来显然有些麻烦。Spring解决了这个问题，引入了两个特性IoC和DI。</p>
+<h4 id="IoC-控制反转-Inversion-of-Control"><a href="#IoC-控制反转-Inversion-of-Control" class="headerlink" title="IoC 控制反转 Inversion of Control"></a>IoC 控制反转 Inversion of Control</h4><p>一般情况下，我们要实例化一个对象，肯定使用<code>Object ob = new Object();</code>这种写法在类内部主动创建依赖对象，但是有了IoC之后，我们把创建依赖对象的权力交给了IoC容器。</p>
+<h4 id="DI-依赖注入-Dependency-Injection"><a href="#DI-依赖注入-Dependency-Injection" class="headerlink" title="DI 依赖注入 Dependency Injection"></a>DI 依赖注入 Dependency Injection</h4><p>IoC容器为应用程序提供运行时，所依赖的资源，称之为依赖注入。</p>
+<h4 id="Bean对象"><a href="#Bean对象" class="headerlink" title="Bean对象"></a>Bean对象</h4><p>顾名思义，就是在IoC容器中，像一个豆荚里的豆子，IoC容器是豆荚。</p>
+<p><img src="https://itohsaka.cn/PicGo/tmp6982.png" srcset="/img/loading.gif" lazyload alt="tmp6982"></p>
+<blockquote>
+<p>图中用<code>@Component</code>注解了<code>UserServiceImpl</code>和<code>UserDaoImpl</code>，这样就相当于把这个类交给IoC容器，由IoC容器来控制。在其他类中需要实例化接口（比如<code>private UserService userService;</code>）时，在创建实例化对象的语句上加上<code>@Autowired</code>注解，Spring会自动去找接口对应的实现类。</p>
+<p>以<code>private UserService userService;</code>为例，在UserController调用<code>private UserService userService;</code>并加上<code>@Autowired</code>注解，运行时，Spring会自动寻找实现了UserService接口的实现类，找到了有<code>@Component</code>的<code>UserServiceImpl</code>，那初始化就使用这个实现类进行初始化。</p>
+<blockquote>
+<p>用<code>@Component</code>和<code>@Autowired</code>的好处就是，比如我需要修改实现类，我现在要用<code>NewUserServiceImpl</code>而不是<code>UserServiceImpl</code>，我只要去掉<code>UserServiceImpl</code>的<code>@Component</code>注解，在<code>NewUserServiceImpl</code>里加上注解就行，不用修改UserController，因为类似<code>private UserService userService = new UserServiceImpl();</code>是由Spring去控制的，不用你操心</p>
+</blockquote>
+</blockquote>
+<p>这里需要对<code>@Component</code>注解进行一个说明，在Spring中，component注解有3个衍生注解，对应3层架构，具体如下</p>
+<table>
+<thead>
+<tr>
+<th>注解</th>
+<th>说明</th>
+<th>位置</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>@Component</td>
+<td>声明bean的基础注解</td>
+<td>不属于以下三类时，用此注解</td>
+</tr>
+<tr>
+<td>@Controller</td>
+<td>@Component的衍生注解</td>
+<td>标注在控制层类上</td>
+</tr>
+<tr>
+<td>@Service</td>
+<td>@Component的衍生注解</td>
+<td>标注在业务层类上</td>
+</tr>
+<tr>
+<td>@Repository</td>
+<td>@Component的衍生注解</td>
+<td>标注在数据访问层类上（由于与mybatis整合，用的比较少）</td>
+</tr>
+</tbody></table>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>SpringBoot_DAY01</div>
+      <div>https://allml777.github.io/2025/03/22/SpringBoot-DAY01/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>ALLML</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年3月22日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - ALLML">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/07/02/%E8%AE%B0%E5%BD%95Windows-11-%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E5%B1%95%E5%BC%80%E7%BC%93%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="记录Windows 11 右键菜单展开缓慢的解决方法">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">记录Windows 11 右键菜单展开缓慢的解决方法</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/03/19/JMeter%E5%85%A5%E9%97%A8/" title="JMeter入门">
+                        <span class="hidden-mobile">JMeter入门</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
